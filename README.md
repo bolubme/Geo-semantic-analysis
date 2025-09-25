@@ -6,53 +6,58 @@ Author: Morolari Boluwatife
 Organization: Data Science Nigeria, Lagos, Nigeria
 Email: morolaribolu@gmail.com
 
-Overview
+📖 Overview
 
-This project investigates the service quality of hospitals in Nigeria by analyzing citizens’ opinions expressed on social media platforms, primarily Twitter. The study combines geo-semantic analysis, natural language processing (NLP), and sentiment analysis to assess public perception of healthcare services, highlight critical service gaps, and provide actionable insights for policymakers and healthcare providers.
+This project evaluates the service quality of hospitals in Nigeria by analyzing citizens’ opinions expressed on social media. Using Twitter data, combined with geo-semantic analysis, natural language processing (NLP), and sentiment analysis, this study provides insights into:
 
-Social media provides a valuable platform for citizens to voice their healthcare experiences. Using geo-tagged posts and topic modeling, this study profiles hospital performance across different regions in Nigeria.
+Public perception of hospital services
 
-Objectives
+Geographic variations in hospital satisfaction
 
-To assess citizen sentiment towards hospital services in Nigeria.
+Key factors contributing to service quality issues
 
-To identify key factors affecting hospital service quality (e.g., infrastructure, waiting times, staff behavior).
+The results can inform policymakers, healthcare providers, and stakeholders to improve service delivery.
 
-To map geographical variations in hospital service perception across Nigeria.
+🎯 Objectives
 
-To provide insights for healthcare policy and hospital management improvements.
+Assess citizens' sentiment towards hospital services in Nigeria.
 
-Methods
-Data Collection
+Identify critical factors affecting service quality (e.g., infrastructure, waiting times, staff professionalism).
 
-Platform: Twitter (most widely used for healthcare opinions in Nigeria).
+Map geographical variations in hospital service perception.
+
+Provide actionable insights for healthcare policy and hospital management.
+
+🛠 Methods
+1. Data Collection
+
+Platform: Twitter
 
 Tool: Twint
- Python scraper (no API required).
+ (Python-based scraper, no API required)
 
-Keywords: Names of hospitals across Nigeria.
+Keywords: Names of hospitals across Nigeria
 
-Collected Data: Tweet ID, timestamp, content, author handle, etc.
+Data Collected: Tweet ID, timestamp, content, author handle
 
-Data Preprocessing
+2. Data Preprocessing
 
-Removal of irrelevant tweets (less than 3 words, unrelated mentions).
+Removed irrelevant tweets (e.g., <3 words, unrelated mentions)
 
-Cleaning: hyperlinks, hashtags, usernames, emojis, numbers, and punctuation removed.
+Cleaned text (hyperlinks, hashtags, mentions, emojis, numbers, punctuation)
 
-Tokenization & Lemmatization: Using NLTK library.
+Tokenization & Lemmatization: Using NLTK
 
-Stop-word Removal to retain meaningful words.
+Removed stop words for meaningful analysis
 
-Final dataset: ~250 curated tweets.
+Final Dataset: 250 curated tweets
 
-Data Analysis
-
+3. Data Analysis
 Topic Modeling
 
-Short Text Topic Modeling (STTM) using Gibbs Sampling Dirichlet Mixture Model (GSDMM).
+Used Short Text Topic Modeling (STTM) with GSDMM (Gibbs Sampling Dirichlet Mixture Model)
 
-Identified hospital-related topics like:
+Identified key topics:
 
 Infrastructure & Facilities
 
@@ -66,60 +71,51 @@ Overall Patient Experience
 
 Sentiment Analysis
 
-Conducted with TextBlob to determine positive, negative, or neutral sentiment.
+Library: TextBlob
 
-Sentiment polarity range: -1 (negative) to 1 (positive).
+Sentiment polarity: -1 (negative) to +1 (positive)
 
 Geo-Semantic Analysis
 
-Geocoding: Used OpenCage API to convert hospital names to latitude/longitude.
+Geocoding via OpenCage to convert hospital names to latitude/longitude
 
-Mapped sentiment distribution across regions to identify areas of high dissatisfaction.
+Mapped tweets to visualize geographic sentiment distribution
 
-Key Findings
+📊 Key Findings
+Sentiment Analysis
 
-Sentiment Distribution:
+Negative Sentiment: ~80% of tweets
 
-~80% negative posts
+Positive Sentiment: ~10% of tweets
 
-~10% positive posts
+Neutral: ~10%
 
-Remaining neutral
+Common Keywords (Negative Sentiment)
 
-Common Keywords in Negative Posts:
+Poor service delivery
 
-“Poor service delivery”
+Inadequate facilities
 
-“Inadequate facilities”
+Long waiting times
 
-“Long waiting times”
+Lack of equipment
 
-“Lack of equipment”
+Geographic Insights
 
-Geographical Insights:
+Major cities with highest negative sentiment: Lagos, Abuja, Oyo
 
-Major cities (Lagos, Abuja, Oyo) had the highest concentration of negative sentiment.
+Example: Lagos Island Maternity Hospital showed strong negative feedback related to staff and equipment
 
-Lagos Island Maternity Hospital showed significant negative feedback related to staff and equipment.
+Implications
 
-Implications:
+Urgent need to improve infrastructure, staffing, and hospital accessibility
 
-Highlights urgent need for improvements in infrastructure, staffing, funding, and hospital accessibility.
+Hospitals should maintain an active social media presence for better communication with citizens
 
-Suggests hospitals should maintain an active social media presence for better communication and service feedback.
+💡 Conclusion
 
-Conclusion
+Geo-semantic analysis of social media posts provides valuable insights into public perception of hospital services.
 
-This study demonstrates the power of geo-semantic analysis and social media data in evaluating hospital service quality. Despite limitations (e.g., small tweet sample, potential bias), the results provide actionable insights for healthcare providers and policymakers aiming to improve service delivery in Nigeria.
+Despite the dataset being limited, trends indicate widespread dissatisfaction with Nigerian hospitals.
 
-References
-
-Greaves F, Laverty AA, Cano DR, et al. Tweets about hospital quality: a mixed methods study. BMJ Quality & Safety 2014;23:838-846.
-
-Hawkins JB, Brownstein JS, Tuli G, et al. Measuring patient-perceived quality of care in US hospitals using Twitter. BMJ Quality & Safety 2016;25:404-413.
-
-Greaves F, Ramirez-Cano D, et al. Use of sentiment analysis for capturing patient experience from free-text comments posted online. J Med Internet Res. 2013;15(11):e239.
-
-Nghiem, Son & Mehta, Pratik & Tao, Liang. (2013). Twitter for Public Health: An Open-source Data Solution.
-
-Huang JH, Floyd MF, et al. Exploring public values through Twitter data associated with urban parks pre- and post-COVID-19. Landsc Urban Plan. 2022;227:104517.
+Findings highlight areas requiring urgent attention and can guide policy reforms and healthcare improvements.
